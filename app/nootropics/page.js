@@ -1,7 +1,7 @@
 export default function NootropicsPage() {
     return (
         <>
-            <p>Nootropics page</p>
+            <p className="bg-red-500">Nootropics page</p>
         </>
     )
 }
