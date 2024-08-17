@@ -9,12 +9,11 @@ export default function CategoryList() {
 
     return (
         <ul>
-            <li><CategoryItem key={0} name="All" isActive={isInit || activeId === 0}
+            <li key={0}><CategoryItem name="All" isActive={isInit || activeId === 0}
                               handleClick={() => handleSetActiveId(0)}/></li>
             {CATEGORIES.map(item => (
-                <li>
+                <li key={item.id}>
                     <CategoryItem
-                    key={item.id}
                     name={item.name}
                     isActive={activeId === item.id}
                     handleClick={() => handleSetActiveId(item.id)}/>

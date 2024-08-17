@@ -56,9 +56,13 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
                             </svg>
                             <p className={vendorData.hasReport ? "" : "text-slate-300"}>Third-party report</p>
                         </div>
-                        <div className="flex flex-wrap">
-                            {categoryData && categoryData.map(item => (<CategoryTag data={item}/>))}
-                        </div>
+                        <li className="flex flex-wrap">
+                            {categoryData && categoryData.map((item, index) => (
+                                <li key={index}>
+                                    <CategoryTag data={item}/>
+                                </li>
+                            ))}
+                        </li>
                     </div>
                     <p>{vendorData.description}</p>
                 </div>}

@@ -37,10 +37,10 @@ export default function MainData() {
                 <div className="mr-5 w-5/6">
                     <ul className="grid grid-cols-4">
                     {vendors.map(item => (
-                        <li>
-                            <Vendor key={item.id}
-                                    name={item.name} logo={item.logo}
-                                    handleClick={() => handleOpenModal(item.id)}
+                        <li key={item.id}>
+                            <Vendor
+                                name={item.name} logo={item.logo}
+                                handleClick={() => handleOpenModal(item.id)}
                             />
                         </li>
                     ))}
