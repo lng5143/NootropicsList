@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={jetbrainsMono.className}>
         <MainHeader />
-        {children}
+            {children}
         <Footer />
       </body>
     </html>

@@ -11,7 +11,7 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
     const vendorData = VENDORS.find(o => o.id === id);
     const categoryData = vendorData ? CATEGORIES
                                 .filter(o => vendorData.categories.includes(o.id))
-                                .map(o => ({ name: o.name, color: o.color })) : undefined;
+                                .map(o => ({ name: o.name, color: o.colorHex })) : undefined;
 
     useEffect(() => {
         const handleClick = (event) => {

@@ -35,7 +35,7 @@ export default function MainData() {
             <VendorModal ref={dialog} id={currentVendorId} onClose={handleCloseModal} isOpen={currentVendorId !== null}/>
             <div className="flex mb-20 w-full">
                 <div className="mr-5 w-5/6">
-                    <ul className="grid grid-cols-4">
+                    <ul className="grid grid-cols-4 gap-2">
                     {vendors.map(item => (
                         <li key={item.id}>
                             <Vendor

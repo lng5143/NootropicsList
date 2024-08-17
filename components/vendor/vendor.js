@@ -3,15 +3,21 @@ import Image from "next/image";
 export default function Vendor({ name, logo, handleClick }) {
     return (
         <>
-            <div className="h-60 p-3 flex flex-col
-                            justify-center items-center
-                            border-4 border-slate-800 -m-0.5
-                            cursor-pointer"
-                onClick={handleClick}>
-                <h2 className="text-center mb-5">{name}</h2>
-                <div className="relative w-10 h-10">
-                    <Image src={logo} fill alt={`${name} logo`}/>
+            <div className="border-2 border-slate-300 p-2 h-60 flex flex-col
+                            items-center
+                            cursor-pointer
+                            rounded-md
+                            hover:bg-blue-300"
+                 onClick={handleClick}>
+                <div className="basis-2/3 flex items-center">
+                    <Image
+                        src={logo}
+                        width={150}
+                        height={0}
+                        layout="intrinsic"
+                        alt={`${name} logo`}/>
                 </div>
+                <h2 className="text-center basis-1/3">{name}</h2>
             </div>
         </>
     )
