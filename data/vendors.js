@@ -4,15 +4,16 @@ const VENDORS = [
         name: 'Nootropics Depot',
         logo: '',
         url: '',
-        categories: [],
+        categories: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         hasReport: true,
+        description: 'Nootropics Depot sells the best nootropic powders and capsules online. We offer pure nootropics and dietary supplements at the best prices.'
     },
     {
         id: 2,
         name: 'Science.bio',
         logo: '',
         url: '',
-        categories: [],
+        categories: [4, 5, 6],
         hasReport: true,
     },
     {
