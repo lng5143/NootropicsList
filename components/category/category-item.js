@@ -5,6 +5,10 @@ export default function CategoryItem({name, isActive, handleClick}) {
     else classes += " bg-slate-200"
 
     return (
-        <button className={`${isActive ? "bg-slate-900 text-slate-200" : "bg-slate-200"} text-left w-full p-2 mb-2 hover:bg-blue-300 hover:text-black`} onClick={handleClick}>{name}</button>
+        <button
+            className={`${isActive ? "bg-slate-900 text-slate-200" : "bg-slate-200"} text-left w-full p-2 mb-2 hover:bg-blue-300 hover:text-black`}
+            onClick={handleClick}>
+            {name}
+        </button>
     )
 }
