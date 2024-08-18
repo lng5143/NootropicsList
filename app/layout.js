@@ -14,8 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jetbrainsMono.className}>
-        <MainHeader />
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
+      <body className={jetbrainsMono.className + " "}>
             {children}
         <Footer />
       </body>

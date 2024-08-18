@@ -31,11 +31,11 @@ export default function MainData() {
     const vendors = getVendors(activeId);
 
     return (
-        <>
+        <div>
             <VendorModal ref={dialog} id={currentVendorId} onClose={handleCloseModal} isOpen={currentVendorId !== null}/>
-            <div className="flex mb-20 w-full">
-                <div className="mr-5 w-5/6">
-                    <ul className="grid grid-cols-4 gap-2">
+            <div className="flex flex-col-reverse lg:flex-row mb-20 w-full">
+                <div className="mr-5 w-full lg:w-5/6">
+                    <ul className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {vendors.map(item => (
                         <li key={item.id}>
                             <Vendor
@@ -46,8 +46,8 @@ export default function MainData() {
                     ))}
                     </ul>
                 </div>
-                <div className="w-1/6">
-                    <ul>
+                <div className="w-full max-w-full lg:w-1/6 mb-3">
+                    <ul className="flex overflow-x-scroll flex-row lg:flex-col ">
                         <li key={0}><CategoryItem name="All" isActive={isInit || activeId === 0}
                                           handleClick={() => handleSetActiveId(0)}/></li>
                         {CATEGORIES.map(item => (
@@ -61,6 +61,6 @@ export default function MainData() {
                     </ul>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

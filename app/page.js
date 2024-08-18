@@ -3,7 +3,7 @@ import Faq from "@/components/main/faq";
 
 export default function Home() {
   return (
-      <div className="box-border">
+      <div className="box-border max-w-fit">
           <header className="p-20 text-center">
               <h1 className="text-5xl">CURATED NOOTROPICS VENDORS</h1>
               <p className="text-xl">Description...</p>
