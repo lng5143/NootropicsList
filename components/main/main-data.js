@@ -77,7 +77,7 @@ export default function MainData() {
                                onChange={handleSearchNootropics}
                                placeholder="Search Nootropics..." />
                     </form>
-                    <ul className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-hidden gap-2">
+                    <ul className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto gap-2 max-h-screen">
                         <li key={0}><NootropicNavItem name="All" isActive={isInit || activeId === 0}
                                                   handleClick={() => handleSetActiveId(0)}/></li>
                         {currentNootropics.map(item => (
