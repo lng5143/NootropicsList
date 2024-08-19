@@ -67,6 +67,58 @@ const NOOTROPICS = [
         id: 17,
         name: "Aniracetam"
     },
+    {
+        id: 18,
+        name: "Phenylpiracetam"
+    },
+    {
+        id: 19,
+        name: "L-Tyrosine"
+    },
+    {
+        id: 20,
+        name: "Nicotinamide Mononucleotide"
+    },
+    {
+        id: 21,
+        name: "L-Taurine"
+    },
+    {
+        id: 22,
+        name: "Huperzine A"
+    },
+    {
+        id: 23,
+        name: "Cerebrolysin"
+    },
+    {
+        id: 24,
+        name: "5-HTP"
+    },
+    {
+        id: 25,
+        name: "Noopept"
+    },
+    {
+        id: 26,
+        name: "J147"
+    },
+    {
+        id: 27,
+        name: "Dihexa"
+    },
+    {
+        id: 28,
+        name: "9-Me-BC"
+    },
+    {
+        id: 29,
+        name: "NSI-189"
+    },
+    {
+        id: 30,
+        name: "Methylene Blue"
+    },
 ]
 
 export default NOOTROPICS
