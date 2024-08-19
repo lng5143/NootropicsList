@@ -52,20 +52,24 @@ export default function MainData() {
     const vendors = getVendorsByNootropics(activeId);
 
     return (
-        <div>
+        <>
             <VendorModal ref={dialog} id={currentVendorId} onClose={handleCloseModal} isOpen={currentVendorId !== null}/>
             <div className="w-full flex flex-col-reverse lg:flex-row mb-20 ">
                 <div className="mr-5 w-full lg:w-5/6">
-                    <ul className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                    {vendors.map(item => (
-                        <li key={item.id}>
-                            <Vendor
-                                name={item.name} logo={item.logo}
-                                handleClick={() => handleOpenModal(item.id)}
-                            />
-                        </li>
-                    ))}
-                    </ul>
+                    {vendors.length === 0 &&
+                        <p className="text-2xl text-slate-800 mt-5 text-center w-full">There is no vendor available for this nootropic...</p>}
+                    {vendors.length >0 &&
+                        <ul className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            {vendors.map(item => (
+                                <li key={item.id}>
+                                    <Vendor
+                                        name={item.name} logo={item.logo}
+                                        handleClick={() => handleOpenModal(item.id)}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    }
                 </div>
                 <div className="w-full lg:w-1/6 mb-3">
                     <form className="w-full h-10 mb-2" onSubmit={handleSubmitNootropics}>
@@ -73,7 +77,7 @@ export default function MainData() {
                                onChange={handleSearchNootropics}
                                placeholder="Search Nootropics..." />
                     </form>
-                    <ul className="flex flex-row lg:flex-col ">
+                    <ul className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-hidden gap-2">
                         <li key={0}><NootropicNavItem name="All" isActive={isInit || activeId === 0}
                                                   handleClick={() => handleSetActiveId(0)}/></li>
                         {currentNootropics.map(item => (
@@ -87,6 +91,6 @@ export default function MainData() {
                     </ul>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
