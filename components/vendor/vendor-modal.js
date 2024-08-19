@@ -9,9 +9,6 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
     const modal = useRef();
 
     const vendorData = VENDORS.find(o => o.id === id);
-    const categoryData = vendorData ? CATEGORIES
-                                .filter(o => vendorData.categories.includes(o.id))
-                                .map(o => ({ name: o.name, color: o.colorHex })) : undefined;
 
     useEffect(() => {
         const handleClick = (event) => {
@@ -49,20 +46,13 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
                                   href={vendorData.url}>Go to website</Link>
                         </div>
                         <div className="mb-3 flex items-center">
-                            <svg className="mr-1" fill={vendorData.hasReport ? "#008000" : "#CBD5E1"} width="20px" height="20px" viewBox="0 0 24 24"
+                            <svg className="mr-1" fill={vendorData.isHaveReport ? "#008000" : "#CBD5E1"} width="20px" height="20px" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm5.676,8.237-6,5.5a1,1,0,0,1-1.383-.03l-3-3a1,1,0,1,1,1.414-1.414l2.323,2.323,5.294-4.853a1,1,0,1,1,1.352,1.474Z"/>
                             </svg>
-                            <p className={vendorData.hasReport ? "" : "text-slate-300"}>Third-party report</p>
+                            <p className={vendorData.isHaveReport ? "" : "text-slate-300"}>Third-party report</p>
                         </div>
-                        <ul className="flex flex-wrap">
-                            {categoryData && categoryData.map((item, index) => (
-                                <li key={index}>
-                                    <CategoryTag data={item}/>
-                                </li>
-                            ))}
-                        </ul>
                     </div>
                     <p>{vendorData.description}</p>
                 </div>}
