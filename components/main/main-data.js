@@ -10,6 +10,7 @@ import NOOTROPICS from "@/data/nootropics";
 
 export default function MainData() {
     const [activeId, setActiveId] = useState(0);
+    const [isInit, setIsInit] = useState(true);
     const [currentVendorId, setCurrentVendorId] = useState(null);
     const [currentNootropics, setCurrentNootropics] = useState(NOOTROPICS);
     const dialog = useRef();
@@ -53,7 +54,7 @@ export default function MainData() {
     return (
         <div>
             <VendorModal ref={dialog} id={currentVendorId} onClose={handleCloseModal} isOpen={currentVendorId !== null}/>
-            <div className="flex flex-col-reverse lg:flex-row mb-20 ">
+            <div className="w-full flex flex-col-reverse lg:flex-row mb-20 ">
                 <div className="mr-5 w-full lg:w-5/6">
                     <ul className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {vendors.map(item => (
@@ -73,6 +74,8 @@ export default function MainData() {
                                placeholder="Search Nootropics..." />
                     </form>
                     <ul className="flex flex-row lg:flex-col ">
+                        <li key={0}><NootropicNavItem name="All" isActive={isInit || activeId === 0}
+                                                  handleClick={() => handleSetActiveId(0)}/></li>
                         {currentNootropics.map(item => (
                             <li key={item.id}>
                                 <NootropicNavItem
