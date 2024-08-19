@@ -3,6 +3,7 @@ import VENDORS from "@/data/vendors";
 import CATEGORIES from "@/data/categories";
 import Link from "next/link";
 import CategoryTag from "@/components/category/category-tag";
+import TickItem from "@/components/vendor/tick-item";
 
 const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) {
     const dialog = useRef();
@@ -40,18 +41,21 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
             <dialog className="w-1/2 p-10 rounded-md" ref={dialog}>
                 {vendorData && <div ref={modal}>
                     <div className="mb-8">
-                        <div className="flex items-center mb-3">
+                        <div className="flex items-center mb-5">
                             <h1 className="text-5xl flex-grow">{vendorData.name}</h1>
                             <Link className="text-slate-200 bg-blue-800 py-2 px-4 text-lg rounded-md text-center"
                                   href={vendorData.url}>Go to website</Link>
                         </div>
-                        <div className="mb-3 flex items-center">
-                            <svg className="mr-1" fill={vendorData.isHaveReport ? "#008000" : "#CBD5E1"} width="20px" height="20px" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm5.676,8.237-6,5.5a1,1,0,0,1-1.383-.03l-3-3a1,1,0,1,1,1.414-1.414l2.323,2.323,5.294-4.853a1,1,0,1,1,1.352,1.474Z"/>
-                            </svg>
-                            <p className={vendorData.isHaveReport ? "" : "text-slate-300"}>Third-party report</p>
+                        <div className="flex mb-3">
+                            <div className="basis-1/2">
+                                <TickItem isActive={vendorData.isHaveReport} content="Third-party report" />
+                            </div>
+                            <div className="basis-1/2">
+                                <TickItem isActive={vendorData.isShipInternational} content="International shipping" />
+                            </div>
+                        </div>
+                        <div>
+                            <p>Ship from: {vendorData.shipFrom.join(', ')}</p>
                         </div>
                     </div>
                     <p>{vendorData.description}</p>

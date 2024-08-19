@@ -23,10 +23,9 @@ const VENDORS = [
         name: 'CosmicNootropic',
         logo: '',
         url: '',
-        categories: ['United States, Russia'],
         isHaveReport: true,
         isShipInternational: true,
-        shipFrom: ['United States'],
+        shipFrom: ['United States', 'Russia'],
     },
     {
         id: 4,
