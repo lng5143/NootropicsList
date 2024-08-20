@@ -25,7 +25,7 @@ const NOOTROPICS = [
     },
     {
         id: 7,
-        name: "Sabroxy"
+        name: "Oroxylin A (Sabroxy)"
     },
     {
         id: 8,
@@ -118,6 +118,42 @@ const NOOTROPICS = [
     {
         id: 30,
         name: "Methylene Blue"
+    },
+    {
+        id: 31,
+        name: "Picamilon"
+    },
+    {
+        id: 32,
+        name: "Tongkat Ali"
+    },
+    {
+        id: 33,
+        name: "Oxiracetam"
+    },
+    {
+        id: 34,
+        name: "Glutathione"
+    },
+    {
+        id: 35,
+        name: "PQQ"
+    },
+    {
+        id: 36,
+        name: "Resveratrol"
+    },
+    {
+        id: 37,
+        name: "Quercetin"
+    },
+    {
+        id: 38,
+        name: "PRL-8-53"
+    },
+    {
+        id: 39,
+        name: "Nigella Sativa"
     },
 ]
 
