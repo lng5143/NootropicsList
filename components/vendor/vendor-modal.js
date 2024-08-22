@@ -38,13 +38,15 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
 
     return (
         <>
-            <dialog className="w-1/2 p-10 rounded-md" ref={dialog}>
+            <dialog className="w-1/2 p-10 rounded-md border-blue-800 border-4" ref={dialog}>
                 {vendorData && <div ref={modal}>
                     <div className="mb-8">
                         <div className="flex items-center mb-5">
                             <h1 className="text-5xl flex-grow">{vendorData.name}</h1>
-                            <Link className="text-slate-200 bg-blue-800 py-2 px-4 text-lg rounded-md text-center"
-                                  href={vendorData.url}>Go to website</Link>
+                                <a className="text-slate-200 bg-blue-800 py-2 px-4 text-lg rounded-md text-center"
+                                   href={vendorData.url} target="_blank" rel="noopener noreferrer">
+                                    Go to website
+                                </a>
                         </div>
                         <div className="flex mb-3">
                             <div className="basis-1/2">
