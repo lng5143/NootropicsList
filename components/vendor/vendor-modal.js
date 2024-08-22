@@ -48,7 +48,7 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
                         </div>
                         <div className="flex mb-3">
                             <div className="basis-1/2">
-                                <TickItem isActive={vendorData.isHaveReport} content="Third-party report" />
+                                <TickItem isActive={vendorData.isHaveReport} content="Certified lab report" />
                             </div>
                             <div className="basis-1/2">
                                 <TickItem isActive={vendorData.isShipInternational} content="International shipping" />
