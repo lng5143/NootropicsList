@@ -13,7 +13,7 @@ export default function FaqItem({item}) {
         <div className={`
                     ${isOpen ? "bg-slate-800 text-white" : "bg-slate-200"} 
                     m-1.5 cursor-pointer rounded-md
-                    hover:bg-blue-300 hover:text-black`} onClick={toggleAnswer}>
+                    hover:bg-blue-800 hover:text-slate-200`} onClick={toggleAnswer}>
             <div className="flex py-2 px-4">
                 <p className="grow">{item.q}</p>
                 <svg className={isOpen ? "rotate-180" : ""} width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
