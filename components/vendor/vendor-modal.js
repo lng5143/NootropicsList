@@ -58,7 +58,6 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
                             <p>Ship from: {vendorData.shipFrom.join(', ')}</p>
                         </div>
                     </div>
-                    <p>{vendorData.description}</p>
                 </div>}
             </dialog>
         </>

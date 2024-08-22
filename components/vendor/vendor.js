@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Logo from "@/components/vendor/logo";
 
 export default function Vendor({ name, logo, handleClick }) {
     return (
@@ -9,15 +10,10 @@ export default function Vendor({ name, logo, handleClick }) {
                             rounded-md
                             hover:bg-blue-300"
                  onClick={handleClick}>
-                <div className="basis-2/3 flex items-center">
-                    <Image
-                        src={logo}
-                        width={150}
-                        height={0}
-                        layout="intrinsic"
-                        alt={`${name} logo`}/>
+                <div className="basis-3/4 flex items-center">
+                    <Logo image={logo} />
                 </div>
-                <h2 className="text-center basis-1/3">{name}</h2>
+                <h2 className="text-center basis-1/4">{name}</h2>
             </div>
         </>
     )

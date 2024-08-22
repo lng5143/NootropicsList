@@ -13,7 +13,7 @@ const VENDORS = [
     {
         id: 2,
         name: 'Science.bio',
-        logo: '',
+        logo: '/logos/sciencebio.png',
         url: 'https://science.bio/',
         isHaveReport: true,
         isShipInternational: true,
@@ -23,7 +23,7 @@ const VENDORS = [
     {
         id: 3,
         name: 'CosmicNootropic',
-        logo: '',
+        logo: '/logos/cosmic-logo.png',
         url: 'https://cosmicnootropic.com/',
         isHaveReport: true,
         isShipInternational: true,
@@ -33,7 +33,7 @@ const VENDORS = [
     {
         id: 4,
         name: 'Renue By Science',
-        logo: '',
+        logo: '/logos/renue-logo.webp',
         url: 'https://renuebyscience.com/',
         isHaveReport: true,
         isShipInternational: true,
@@ -43,7 +43,7 @@ const VENDORS = [
     {
         id: 7,
         name: 'DoNotAge',
-        logo: '',
+        logo: '/logos/donotage-logo.png',
         url: 'https://donotage.org/',
         isHaveReport: true,
         isShipInternational: true,
@@ -53,7 +53,7 @@ const VENDORS = [
     {
         id: 8,
         name: 'Pure Nootropics',
-        logo: '',
+        logo: '/logos/purenootropics-logo.png',
         url: 'https://www.purenootropics.net/',
         isHaveReport: true,
         isShipInternational: true,
@@ -62,8 +62,8 @@ const VENDORS = [
     },
     {
         id: 9,
-        name: 'LifeLab',
-        logo: '',
+        name: 'LifeLab Supplements',
+        logo: '/logos/lifelab-logo.png',
         url: 'https://www.lifelabsupplements.com/',
         isHaveReport: false,
         isShipInternational: true,
@@ -73,7 +73,7 @@ const VENDORS = [
     {
         id: 10,
         name: 'Mind Nutrition',
-        logo: '',
+        logo: '/logos/mindnutrition-logo.png',
         url: 'https://mindnutrition.com/',
         isHaveReport: false,
         isShipInternational: true,
@@ -83,7 +83,7 @@ const VENDORS = [
     {
         id: 11,
         name: 'Jarrow',
-        logo: '',
+        logo: '/logos/jarrow-logo.png',
         url: 'https://jarrow.com/',
         isHaveReport: true,
         isShipInternational: true,
@@ -93,7 +93,7 @@ const VENDORS = [
     {
         id: 12,
         name: 'Thorne',
-        logo: '',
+        logo: '/logos/thorne-logo.png',
         url: 'https://www.thorne.com/',
         isHaveReport: false,
         isShipInternational: true,
@@ -102,8 +102,8 @@ const VENDORS = [
     },
     {
         id: 15,
-        name: 'Lift Mode',
-        logo: '',
+        name: 'LiftMode',
+        logo: '/logos/liftmode-logo.png',
         url: 'https://liftmode.com/',
         isHaveReport: true,
         isShipInternational: true,
@@ -113,7 +113,7 @@ const VENDORS = [
     {
         id: 16,
         name: 'Swanson',
-        logo: '',
+        logo: '/logos/swanson-logo.png',
         url: 'https://www.swansonvitamins.com/',
         isHaveReport: false,
         isShipInternational: true,
@@ -123,7 +123,7 @@ const VENDORS = [
     {
         id: 17,
         name: 'Now Foods',
-        logo: '',
+        logo: '/logos/now-logo.png',
         url: 'https://www.nowfoods.com/',
         isHaveReport: false,
         isShipInternational: true,
@@ -133,7 +133,7 @@ const VENDORS = [
     {
         id: 18,
         name: 'RUPharma',
-        logo: '',
+        logo: '/logos/rupharma-logo.png',
         url: 'https://rupharma.com/',
         isHaveReport: true,
         isShipInternational: true,
@@ -143,7 +143,7 @@ const VENDORS = [
     {
         id: 20,
         name: 'NutriVita Shop',
-        logo: '',
+        logo: '/logos/nutrivitashop-logo.png',
         url: 'https://www.nutrivitashop.com/',
         isHaveReport: true,
         isShipInternational: true,
