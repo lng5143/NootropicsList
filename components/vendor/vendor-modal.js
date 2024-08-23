@@ -40,7 +40,6 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
         <>
             <dialog className="w-1/2 p-10 rounded-md border-blue-800 border-4" ref={dialog}>
                 {vendorData && <div ref={modal}>
-                    <div className="mb-8">
                         <div className="flex items-center mb-5">
                             <h1 className="text-5xl flex-grow">{vendorData.name}</h1>
                                 <a className="text-slate-200 bg-blue-800 py-2 px-4 text-lg rounded-md text-center"
@@ -59,7 +58,6 @@ const VendorModal = forwardRef(function VendorModal({id, onClose, isOpen}, ref) 
                         <div>
                             <p>Ship from: {vendorData.shipFrom.join(', ')}</p>
                         </div>
-                    </div>
                 </div>}
             </dialog>
         </>
