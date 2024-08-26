@@ -41,7 +41,7 @@ export default function FaqItem({ item }) {
             className="py-2 px-4"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
           >
             {item.a}
           </motion.p>
