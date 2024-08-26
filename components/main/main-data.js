@@ -9,25 +9,26 @@ import NootropicNavItem from "@/components/nootropic/nootropic-nav-item";
 import NOOTROPICS from "@/data/nootropics";
 
 export default function MainData() {
-    const [activeId, setActiveId] = useState(0);
+    const [activeNootropicId, setActiveNootropicId] = useState(0);
     const [isInit, setIsInit] = useState(true);
+    const [isOpenModal, setIsOpenModal] = useState(false);
     const [currentVendorId, setCurrentVendorId] = useState(null);
     const [currentNootropics, setCurrentNootropics] = useState(NOOTROPICS);
     const dialog = useRef();
 
     function handleSetActiveId(id) {
-        setActiveId(id);
+        setActiveNootropicId(id);
         setIsInit(false);
     }
 
     function handleOpenModal(id) {
         setCurrentVendorId(id);
-        dialog.current.open();
+        setIsOpenModal(true);
     }
 
     function handleCloseModal() {
-        setCurrentVendorId(null)
-        dialog.current.close();
+        setCurrentVendorId(null);
+        setIsOpenModal(false);
     }
 
     function handleSearchNootropics(event) {
@@ -49,11 +50,11 @@ export default function MainData() {
         event.preventDefault();
     }
 
-    const vendors = getVendorsByNootropics(activeId);
+    const vendors = getVendorsByNootropics(activeNootropicId);
 
     return (
         <>
-            <VendorModal ref={dialog} id={currentVendorId} onClose={handleCloseModal} isOpen={currentVendorId !== null}/>
+            {currentVendorId && <VendorModal id={currentVendorId} onClose={handleCloseModal} isOpen={currentVendorId !== null}/>}
             <div className="w-full flex flex-col-reverse lg:flex-row mb-20 ">
                 <div className="mr-5 w-full lg:w-5/6">
                     {vendors.length === 0 &&
@@ -78,13 +79,13 @@ export default function MainData() {
                                placeholder="Search Nootropics..." />
                     </form>
                     <ul className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto gap-2 max-h-screen">
-                        <li key={0}><NootropicNavItem name="All" isActive={isInit || activeId === 0}
+                        <li key={0}><NootropicNavItem name="All" isActive={isInit || activeNootropicId === 0}
                                                   handleClick={() => handleSetActiveId(0)}/></li>
                         {currentNootropics.map(item => (
                             <li key={item.id}>
                                 <NootropicNavItem
                                     name={item.name}
-                                    isActive={activeId === item.id}
+                                    isActive={activeNootropicId === item.id}
                                     handleClick={() => handleSetActiveId(item.id)}/>
                             </li>
                         ))}
