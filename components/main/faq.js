@@ -5,7 +5,7 @@ export default function Faq() {
     return (
         <div className=" w-full md:w-10/12">
             <div className="text-center mb-10">
-                <h1 className="text-4xl p-2">FAQs</h1>
+                <h1 className="text-4xl p-2 font-bold">FAQs</h1>
                 <p className="">Questions about nootropics.</p>
             </div>
             <ul className="">

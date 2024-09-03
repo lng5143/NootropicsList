@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
       <body className={jetbrainsMono.className + " "}>
         <div id="modal-root"></div>
             {children}
-        <Footer />
       </body>
     </html>
   );

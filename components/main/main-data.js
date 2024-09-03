@@ -55,7 +55,7 @@ export default function MainData() {
     return (
         <>
             {currentVendorId && <VendorModal id={currentVendorId} onClose={handleCloseModal} isOpen={currentVendorId !== null}/>}
-            <div className="w-full flex flex-col-reverse lg:flex-row mb-20 ">
+            <div className="w-full flex flex-col-reverse lg:flex-row">
                 <div className="mr-5 w-full lg:w-5/6">
                     {vendors.length === 0 &&
                         <p className="text-2xl text-slate-800 mt-5 text-center w-full">There is no vendor available for this nootropic...</p>}
