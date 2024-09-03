@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import SocialLink from "./social-link";
 export default function About() {
     return (
         <div className="w-full md:w-10/12 flex gap-20">
@@ -19,12 +19,13 @@ export default function About() {
                     <p>If you find this website useful, please consider buying me a coffee. It would mean a lot to me!</p>
                     <button className="bg-blue-800 text-slate-200 rounded-md p-5 w-fit font-bold"><a href="https://buymeacoffee.com/louisng" target="_blank" rel="noopener noreferrer">Buy me a coffee</a></button>
                 </div>
+                <div className="mt-10 flex flex-col gap-2">
+                    <SocialLink iconSrc="/x-logo.svg" href="https://x.com/louis_lamnguyen" text="Join me on X / Twitter" />
+                    <SocialLink iconSrc="/rocket.svg" href="https://louis-nguyen.me" text="Check out my website" />
+                </div>
             </div>
             
-            {/* <div>
-                <a href="https://louisnguyen.me" target="_blank" rel="noopener noreferrer">My personal website</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Join me on Twitter</a>
-            </div> */}
+            
         </div>
     )
 }
